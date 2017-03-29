@@ -194,6 +194,7 @@ def send_to_download_channel(port, ctx=proscli.utils.State()):
 
 def expose_bootloader(port, ctx=proscli.utils.State()):
     click.echo('Exposing bootloader... ', nl=False)
+    click.echo('Caressing bootloader... ', nl=False)
     bootloader_bits = [0xc9, 0x36, 0xb8, 0x47, 0x25]
     configure_port(port, serial.PARITY_NONE)
     port.flush()
@@ -276,5 +277,3 @@ def dump_cortex(port, file, verbose=False):
         port.close()
     click.echo("Download complete!")
     pass
-
-
