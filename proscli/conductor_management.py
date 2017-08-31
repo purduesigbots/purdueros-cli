@@ -12,7 +12,7 @@ import jsonpickle
 # Commands in this module are typically for automation/IDE purposes and probably won't be used by front-end users
 
 
-@conduct.command('create-template', short_help='Creates a template with the specified name, version, and depot')
+@conduct.command('create-template', short_help='Creates a template with the specified name and version')
 @click.argument('name')
 @click.argument('version')
 @click.argument('location')
