@@ -309,14 +309,14 @@ def download(cfg, name, version, depot, no_check):
     if new_identifier == False:
         click.echo('Failed to download {0} {1} from {2}'.format(identifier.version, identifier.version, identifier.depot))
     else:
-        if new_identifier.name == 'kernel':
+        if hasattr(identifier, 'name') and identifier.name == 'kernel':
             click.echo('''To create a new PROS project with this template, run `pros conduct new <folder> {0} {1}`,
         or to upgrade an existing project, run `pros conduct upgrade <folder> {0} {1}'''
-                       .format(new_identifier.version, new_identifier.depot))
+                       .format(identifier.version, identifier.depot))
         else:
             click.echo('''To add this library to a PROS project, run `pros conduct add-lib <folder> {0} {1} {2},
             or to upgrade an existing project with this library to the new version, run `pros conduct upgrade-lib <Folder> {0} {1} {2}'''
-                       .format(new_identifier.name, new_identifier.version, new_identifier.depot))
+                       .format(identifier.name, identifier.version, identifier.depot))
 
 # endregion
 
