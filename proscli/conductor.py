@@ -12,7 +12,6 @@ import prosconfig
 import semantic_version as semver
 import sys
 import tabulate
-import pdb
 
 
 # from typing import List
@@ -310,7 +309,6 @@ def download(cfg, name, version, depot, no_check):
     if new_identifier == False:
         click.echo('Failed to download {0} {1} from {2}'.format(identifier.version, identifier.version, identifier.depot))
     else:
-        pdb.set_trace()
         if hasattr(identifier, 'name') and identifier.name == 'kernel':
             click.echo('''To create a new PROS project with this template, run `pros conduct new <folder> {0} {1}`,
         or to upgrade an existing project, run `pros conduct upgrade <folder> {0} {1}'''
