@@ -1,3 +1,5 @@
+#!/bin/bash
+
 root=pkg/ROOT
 scripts=pkg/scripts
 identifier=edu.purdue.cs.pros.pros-cli
