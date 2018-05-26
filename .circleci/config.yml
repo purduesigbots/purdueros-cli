@@ -3,9 +3,6 @@ jobs:
   build:
     macos:
       xcode: "9.0"
-    branches:
-      only:
-        - master
     steps:
       - checkout
       - run: chmod +x scripts/install_mac_build_dependencies.sh scripts/build_cli_mac.sh scripts/build_pkg_mac.sh
