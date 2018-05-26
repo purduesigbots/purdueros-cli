@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo =============== INSTALLING PYTHON3 ===============
 
 brew upgrade python
