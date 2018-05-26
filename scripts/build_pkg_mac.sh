@@ -29,7 +29,7 @@ EOF
 chmod +x $scripts/*
 
 echo =============== CREATE DSTRIBUTION ===============
-version=`cat build/version`
+version=`cat version`
 cp -r build/PROS\ CLI.app $root
 
 pkgbuild \
