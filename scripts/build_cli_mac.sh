@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo =============== UPDATING VERSION ===============
 python3 version.py
 
