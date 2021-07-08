@@ -1,7 +1,11 @@
 from setuptools import setup
 
 # setup.py for non-frozen builds
-from pip.req import parse_requirements
+try:
+    from pip._internal.req import parse_requirements
+except ImportError:
+    from pip.req import parse_requirements
+
 install_reqs = [str(r.req) for r in parse_requirements('requirements.txt', session=False)]
 
 setup(
